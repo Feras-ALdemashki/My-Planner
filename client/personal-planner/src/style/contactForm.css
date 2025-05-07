@@ -1,0 +1,51 @@
+.contact-form {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border-left: solid 10px #ebd3d8;
+  font-family: "Papyrus", "Segoe UI", sans-serif;
+}
+.contact-form ::placeholder {
+  font-size: 14px;
+  color: #1c2e4a;
+  font-family: "Papyrus", "Segoe UI", sans-serif;
+  font-weight: bold;
+}
+
+.contact-form h2 {
+  justify-content: center;
+  margin-left: 100px;
+  color: #ffd13b;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #b8c5db;
+  font-family: "Papyrus", "Segoe UI", sans-serif;
+  font-weight: bold;
+}
+
+.contact-form button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  color: #f5355c;
+  font-size: 22px;
+  font-family: "Papyrus", "Segoe UI", sans-serif;
+  font-weight: bold;
+  padding-left: 150px;
+}
+.contact-form p {
+  color: #f5355c;
+  font-weight: bold;
+  margin-left: 35px;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+}

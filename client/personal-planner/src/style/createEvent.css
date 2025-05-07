@@ -1,0 +1,81 @@
+.create-event-form {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 20px;
+  font-family: "Papyrus", "Segoe UI", sans-serif;
+  border-left: 10px solid #b8c5db;
+}
+
+.create-event-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #ffd13b;
+}
+
+.create-event-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.create-event-form input,
+.create-event-form textarea,
+.create-event-form button {
+  padding: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: solid 1px #b8c5db;
+  font-family: "Papyrus", "Segoe UI", sans-serif;
+  font-weight: bold;
+}
+.create-event-form ::placeholder {
+  font-weight: bold;
+  color: #1c2e4a;
+}
+
+.create-event-form button {
+  padding: 20px;
+  font-weight: bold;
+  color: #f5355c;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: "Papyrus", "Segoe UI", sans-serif;
+  font-size: 20px;
+}
+.create-event-form h4 {
+  color: #ffd13b;
+  font-weight: bold;
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.create-event-form input[type="text"],
+.create-event-form input[type="date"],
+.create-event-form input[type="time"],
+.create-event-form textarea {
+  width: 100%;
+}
+
+.create-event-form button[type="button"] {
+  background-color: #4caf50;
+}
+
+.create-event-form button[type="button"]:hover {
+  background-color: #45a049;
+}
+.create-event-form p {
+  color: #f5355c;
+  font-weight: bold;
+  margin-left: 35px;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+}

@@ -1,0 +1,260 @@
+.lottie-container {
+  position: fixed;
+  display: flex;
+  align-content: end;
+  width: 200px;
+  height: 200px;
+  margin-left: 850px;
+
+  margin-top: 50px;
+}
+.lottie {
+  padding-left: 1px;
+}
+
+.events-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 120px 0px 0px 0px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  justify-content: center;
+  margin-left: 70px;
+  margin-top: 30px;
+  height: fit-content;
+}
+
+.event-card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-left: 50px;
+  align-items: flex-start;
+}
+.event-card p {
+  padding: 0px;
+  margin: 0px;
+  color: #1c2e4a;
+}
+
+.event-card h4 {
+  padding: 0px;
+  margin: 0px;
+  margin-top: 10px;
+  color: #1c2e4a;
+}
+.event-card h5 {
+  color: #1c2e4a;
+}
+
+.details-card {
+  width: 40%;
+  word-wrap: break-word;
+  box-sizing: border-box;
+  text-align: left;
+  padding-left: 40px;
+  padding-top: 0px;
+  background-color: y;
+  margin-left: 50px;
+  border-left: 10px solid #f5355c;
+}
+
+.note-card {
+  width: 40%;
+  box-sizing: border-box;
+  text-align: left;
+  margin-right: 150px;
+  color: #1c2e4a;
+  border-left: 10px solid #ffd13b;
+  justify-content: flex-start;
+  padding-left: 40px;
+  overflow-wrap: break-word;
+}
+.note-card ul {
+  padding-left: 1px;
+  padding-top: 1px;
+  padding-right: 30px;
+  width: 100%;
+  list-style: disc;
+  word-wrap: break-word;
+  width: 70%;
+}
+
+.note-card li {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.note-card h5 {
+  color: #1c2e4a;
+  font-size: 16px;
+  padding: 0%;
+  margin-top: 10px;
+  margin-bottom: 1px;
+}
+
+.filter-name {
+  margin-left: 100px;
+  font-family: "Papyrus", "Segoe UI", sans-serif;
+  color: #1c2e4a;
+  width: 150px;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid #ebd3d8;
+  background: transparent;
+  margin-top: 40px;
+  font-weight: bold;
+}
+.filter-name::placeholder {
+  color: #1c2e4a;
+}
+.filter-name:active {
+  border: none;
+  border-bottom: 2px solid #ebd3d8;
+  outline: none;
+}
+.filter-name:focus {
+  outline: none;
+  border: none;
+  border-bottom: 2px solid #ebd3d8;
+}
+.lottie-arrow {
+  padding-top: 150px;
+  width: 200px;
+  height: 200px;
+}
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: flex-start;
+}
+.delete-btn {
+  background-color: #b8c5db;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #f5355c;
+  font-size: 15px;
+}
+.no-event {
+  font-weight: bold;
+  color: #1c2e4a;
+  border-bottom: #ffd13b solid 1px;
+  margin-left: 250px;
+  margin-top: 100px;
+  font-size: 20px;
+}
+.no-events {
+  font-weight: bold;
+  color: #1c2e4a;
+  border-bottom: #ffd13b solid 1px;
+  margin-left: 350px;
+  margin-top: 100px;
+  font-size: 20px;
+}
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+  .lottie-container {
+    margin-left: 600px;
+  }
+
+  .events-container {
+    padding: 80px 20px 0 20px;
+    margin-left: 20px;
+  }
+
+  .event-card {
+    margin-left: 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .details-card,
+  .note-card {
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 20px;
+  }
+
+  .note-card ul {
+    width: 90%;
+  }
+
+  .filter-name {
+    margin-left: 40px;
+  }
+
+  .no-event {
+    margin-left: 100px;
+    margin-top: 200px;
+  }
+  .no-events {
+    margin-left: 250px;
+    margin-top: 200px;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 768px) {
+  .lottie-container {
+    display: none;
+  }
+
+  .lottie-arrow {
+    width: 100px;
+    height: 100px;
+    padding-top: 50px;
+  }
+
+  .events-container {
+    padding: 60px 10px 0 10px;
+    margin-left: 10px;
+  }
+
+  .event-card {
+    margin-left: 10px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .details-card,
+  .note-card {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 15px;
+  }
+
+  .note-card ul {
+    padding-right: 10px;
+    width: 100%;
+  }
+
+  .filter-name {
+    margin-left: 10px;
+    width: 100%;
+  }
+
+  .no-event {
+    margin: 20px auto;
+    font-size: 16px;
+    text-align: center;
+    max-width: 80%; /* adjust as needed */
+    line-height: 1.4;
+  }
+  .no-events {
+    margin: 20px auto;
+    font-size: 16px;
+    text-align: center;
+    max-width: 80%; /* adjust as needed */
+    line-height: 1.4;
+    margin-left: 50px;
+  }
+}

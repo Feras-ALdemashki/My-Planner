@@ -1,0 +1,187 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ececec;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* logo left, links right */
+  align-items: center;
+  padding: 5px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  height: 60px;
+  background: transparent;
+  border-bottom: solid 1px #b8c5db;
+}
+
+.logo {
+  display: flex;
+  align-items: left;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-left: 40px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.logo p {
+  font-size: 15px;
+  color: #1c2e4a;
+  margin: 0;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  flex: 1;
+  margin-right: 75px;
+}
+
+.links a {
+  padding: 6px 12px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #1c2e4a;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.links a.active {
+  background-color: #f5355c;
+  color: #f8f8f8;
+}
+.log-out {
+  color: #f5355c;
+  font-weight: bold;
+  margin-left: 40px;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.links a:hover {
+  background-color: #f5355c;
+  color: #f8f8f8;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .links {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .logo img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo p {
+    font-size: 12px;
+  }
+
+  .links a {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .links {
+    justify-content: flex-start;
+    width: 100%;
+    margin: 10px 0 0;
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .logo p {
+    font-size: 14px;
+  }
+
+  .links a {
+    font-size: 13px;
+    padding: 5px 10px;
+  }
+
+  .log-out {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 8px 10px;
+  }
+
+  .logo img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .logo p {
+    font-size: 12px;
+  }
+
+  .links {
+    gap: 8px;
+  }
+
+  .links a {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .log-out {
+    font-size: 12px;
+  }
+}
