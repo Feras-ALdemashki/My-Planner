@@ -26,7 +26,8 @@ const Events = () => {
       //  set filtered events to all events and render it
       setFilteredEvents(data);
     } catch (error) {
-      setError(error);
+      console.error("Failed to fetch events:", error);
+      setError("Failed to load events.");
     }
   };
 
