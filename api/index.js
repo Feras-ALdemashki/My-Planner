@@ -7,7 +7,7 @@ import authRoutes from "./routes/auth.js";
 import contactRoutes from "./routes/contact.js";
 import cookieParser from "cookie-parser";
 import "dotenv/config";
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8000;
 
 const app = express();
 app.use(
@@ -24,5 +24,5 @@ app.use("/api/auth", authRoutes);
 app.use("/api/notes", notesRoutes);
 app.use("/api/contact", contactRoutes);
 app.listen(PORT, () => {
-  console.log("connected");
+  console.log(`connected on port ${PORT}`);
 });
