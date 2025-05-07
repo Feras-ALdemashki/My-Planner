@@ -16,7 +16,7 @@ const Events = () => {
         withCredentials: true,
       });
 
-      // if there is no notes transform it into an empty array so i can map over it
+      // if there is no notes transform it into an empty array so i can map over it. i should remove this later i have  changed the  backend response
       const data = res.data.map((event) => ({
         ...event,
         notes: event.notes ? event.notes : [],

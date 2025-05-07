@@ -11,29 +11,49 @@ export const getEvents = async (req, res) => {
     const decoded = jwt.verify(token, secretKey);
     const userId = decoded.id;
 
-    const [rows] = await db.query(
+    // 1. Get all events for the user
+    const [events] = await db.query(
       `
       SELECT 
-        e.id AS event_id,
-        e.name AS event_name,
-        e.description AS event_description,
-        e.location AS event_location,
-        e.date AS event_date,
-        e.time AS event_time,
-        e.created_at AS event_created_at,
-        JSON_ARRAYAGG(
-          JSON_OBJECT('note_id', n.id, 'content', n.content)
-        ) AS notes
-      FROM events e
-      LEFT JOIN notes n ON e.id = n.event_id
-      WHERE e.user_id = ?
-      GROUP BY e.id
-      ORDER BY e.date ASC, e.time ASC;
+        id AS event_id,
+        name AS event_name,
+        description AS event_description,
+        location AS event_location,
+        date AS event_date,
+        time AS event_time,
+        created_at AS event_created_at
+      FROM events
+      WHERE user_id = ?
+      ORDER BY date ASC, time ASC;
       `,
       [userId]
     );
 
-    res.status(200).json(rows);
+    if (events.length === 0) {
+      return res.status(200).json([]);
+    }
+
+    // 2. Get all notes for those events
+    const eventIds = events.map((e) => e.event_id);
+    const [notes] = await db.query(
+      `
+      SELECT 
+        id AS note_id,
+        content,
+        event_id
+      FROM notes
+      WHERE event_id IN (?)
+      `,
+      [eventIds]
+    );
+
+    // 3. Merge notes into corresponding events
+    const merged = events.map((event) => ({
+      ...event,
+      notes: notes.filter((note) => note.event_id === event.event_id),
+    }));
+
+    res.status(200).json(merged);
   } catch (err) {
     console.error("Error in getUserEventsWithNotes:", err);
     res.status(500).json("Server error");
