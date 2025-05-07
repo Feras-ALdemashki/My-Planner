@@ -54,7 +54,7 @@
 
 The app is deployed on Render, with the backend and frontend hosted separately.
 
-- **Render.com URL**: https://my-planner-react.onrender.com/login
+- **Render.com URL**: https://my-planner-react.onrender.com
 
 ## Contributing
 
