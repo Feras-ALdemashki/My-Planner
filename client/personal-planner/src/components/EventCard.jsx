@@ -10,8 +10,8 @@ const EventCard = ({ events, allEvents, onFilterChange, fetchData, error }) => {
   const [filterName, setFilterName] = useState("");
 
   const handleInputChange = (e) => {
+    onFilterChange(e.target.value);
     setFilterName(e.target.value);
-    onFilterChange(e.target.value); // Call the parent function to filter events
   };
   const isFilteredEmpty = events.length === 0 && allEvents.length > 0;
   const isUserNew = allEvents.length === 0;

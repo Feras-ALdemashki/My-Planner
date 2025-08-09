@@ -49,9 +49,9 @@ const Events = () => {
   return (
     <>
       <EventCard
-        events={filteredEvents} // Passing the filtered events
+        events={filteredEvents}
         allEvents={events}
-        onFilterChange={handleFilterChange} // Passing filter handler
+        onFilterChange={handleFilterChange}
         fetchData={fetchData}
         error={error}
       />
